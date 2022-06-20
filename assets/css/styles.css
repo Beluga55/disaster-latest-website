@@ -20,6 +20,7 @@
   --body-color: #fff;
   --container-color: #fff;
   --boxshadow: hsl(226, 4%, 15%);
+  --alter-shadow: hsla(228, 66%, 45%, 0.3);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -124,6 +125,7 @@ body.dark-theme {
   --body-color: hsl(228, 12%, 8%);
   --container-color: hsl(228, 16%, 12%);
   --boxshadow: hsla(0, 0%, 100%, 0.5);
+  --alter-shadow: hsla(0, 0%, 0%, 0.3);
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -355,7 +357,8 @@ body.dark-theme {
   right: calc(50% - 3rem);
 }
 
-.about__container {
+.about__container,
+.screenshots__container {
   padding: 1rem 0 5rem;
 }
 
@@ -366,8 +369,8 @@ body.dark-theme {
   border-radius: 1rem;
   margin: 0 auto;
   transition: 0.4s;
-  border: 2px solid var(--border-color);
-  box-shadow: 0 0 5px var(--boxshadow);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 12px 16px var(--alter-shadow);
 }
 
 .about__img {
@@ -375,7 +378,8 @@ body.dark-theme {
   margin-bottom: 1rem;
 }
 
-.about__title {
+.about__title,
+.screenshots__title{
   text-align: center;
   font-family: var(--josefin-sans);
   text-transform: uppercase;
@@ -405,7 +409,7 @@ body.dark-theme {
 }
 
 .about__card:hover {
-  box-shadow: 0 12px 16px hsla(228, 66%, 45%, 0.1);
+  box-shadow: 0 0px 10px hsla(228, 66%, 45%, 0.4);
 }
 
 .about__button {
@@ -419,10 +423,14 @@ body.dark-theme {
   cursor: pointer;
   font-weight: 600;
   box-shadow: 0 0 20px var(--boxshadow);
+  transition: .3s ease-in-out;
 }
 
 .about__button:hover .about__button-icon {
+  -webkit-transform: translateX(0.25rem);
   transform: translateX(0.25rem);
+  display: inline-flex;
+  transition: .3s ease-in-out;
 }
 
 .about__modal {
@@ -482,9 +490,33 @@ body.dark-theme {
   color: var(--first-color);
 }
 
-.about__subtitle-section {
+.about__subtitle-section,
+.screenshots__subtitle {
   color: var(--text-color);
   font-size: 13px;
   text-align: center;
   margin: 1rem 0;
+}
+
+/*=========== Screenshots ============*/
+.screenshots__card {
+  width: 320px;
+  background-color: var(--container-color);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  margin: 0 auto;
+  transition: 0.4s;
+  border: 2px solid var(--border-color);
+  box-shadow: 0 12px 16px var(--alter-shadow);
+}
+
+.screenshots__card:hover {
+    box-shadow: 0 0px 10px hsla(228, 66%, 45%, 0.4);
+}
+
+.screenshots__img {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -69,8 +69,21 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
 
-/*=============== SWIPER ABOUT ===============*/
+/*=============== SWIPER ABOUT AND SCREENSHOTS  ===============*/
 var swiperAbout = new Swiper(".about__container", {
+  spaceBetween: 32,
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  loop: true,
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+var swiperScreenshots = new Swiper(".screenshots__container", {
   spaceBetween: 32,
   grabCursor: true,
   centeredSlides: true,
