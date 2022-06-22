@@ -135,6 +135,10 @@ body.dark-theme {
   font-weight: 600;
 }
 
+.dark-theme .questions__item {
+  box-shadow: 0 0 10px 4px hsla(228, 66%, 45%, 0.3);
+}
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1024px;
@@ -561,7 +565,7 @@ body.dark-theme {
 }
 
 .questions__item:hover {
-  box-shadow: 0 0px 10px hsla(228, 66%, 45%, 0.4);
+  box-shadow: 0 0px 10px hsla(228, 66%, 45%, 0.3);
 }
 
 .questions__header {
