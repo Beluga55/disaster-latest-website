@@ -289,15 +289,20 @@ body.dark-theme {
 /*=============== BUTTON ===============*/
 .home__button {
   display: inline-block;
-  background: linear-gradient(101deg, hsl(228, 66%, 47%), hsl(228, 66%, 47%));
+  background-image: linear-gradient(to right, var(--first-color) 0%, #8486f3 51%, var(--first-color) 100%);
   color: #fff;
   padding: 14px 28px;
+  background-size: 200% auto;
   border-radius: 0.5rem;
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
   box-shadow: 0 4px 8px hsla(228, 66%, 45%, 0.25);
-  transition: 0.3s;
+  transition: 0.5s;
   cursor: pointer;
+}
+
+.home__button:hover {
+  background-position: right center;
 }
 
 .button:hover {
@@ -348,10 +353,16 @@ body.dark-theme {
   border-radius: 0.5rem;
   font-size: 1.5rem;
   color: var(--first-color);
+  transition: .5s;
 }
 
 .swiper-button-prev {
   left: calc(50% - 3rem);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  border: 2px solid #8486f3;
 }
 
 .swiper-button-next {
