@@ -159,21 +159,6 @@ body.dark-theme {
   padding: 4.5rem 0 2rem;
 }
 
-.section__title {
-  font-size: var(--h2-font-size);
-  margin-bottom: 1rem;
-}
-
-.section__title span {
-  color: var(--second-color);
-}
-
-.section__subtitle {
-  display: block;
-  font-size: var(--small-font-size);
-  color: var(--second-color);
-}
-
 .main {
   overflow: hidden; /* For the animations ScrollReveal*/
 }
@@ -808,8 +793,7 @@ body.dark-theme {
   }
 }
 
-@media screen and (min-width: 767px) 
-{
+@media screen and (min-width: 767px) {
   .home__description,
   .intro__description {
     padding: 0 6rem;
@@ -817,6 +801,25 @@ body.dark-theme {
 
   .home__alter-title {
     font-size: 1.8rem;
+  }
+
+  .intro__container {
+    display: flex;
+    column-gap: 3rem;
+    align-items: center;
+  }
+
+  .intro__data {
+    order: 1;
+  }
+
+  .intro__title {
+    text-align: initial;
+  }
+
+  .intro__description {
+    padding: 0;
+    text-align: initial;
   }
 }
 
@@ -887,9 +890,9 @@ body.dark-theme {
   }
 
   .active-link::after {
-    content: '';
+    content: "";
     position: absolute;
-    bottom: -.25rem;
+    bottom: -0.25rem;
     left: 0;
     width: 50%;
     height: 2px;

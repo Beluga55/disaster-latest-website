@@ -156,3 +156,27 @@ function scrollUp() {
   else scrollUp.classList.remove("show-scroll");
 }
 window.addEventListener("scroll", scrollUp);
+
+/*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "60px",
+  duration: 2500,
+  delay: 400,
+  reset: true,
+});
+
+sr.reveal(
+  `.intro__title, .home__title , .home__alter-title, .about__title, .screenshots__title, .questions__title, .prices__title, .onetap__title`
+);
+sr.reveal(
+  `.intro__description, .home__description, .about__subtitle-section, .screenshots__subtitle, .questions__group, .prices__subtitle, .onetap__subtitle`,
+  { delay: 500 }
+);
+sr.reveal(
+  `.home__buy-wrapper, .about__container, .screenshots__container, .prices__group, .onetap__group`,
+  {
+    delay: 600,
+  }
+);
+sr.reveal(`.intro__img`, { origin: "right" });
