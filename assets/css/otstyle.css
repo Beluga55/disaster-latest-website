@@ -530,7 +530,7 @@ body.dark-theme {
 }
 
 .screenshots__card:hover {
-  box-shadow: 0 0px 10px hsla(228, 66%, 45%, 0.4);
+  box-shadow: 0 0px 10px hsla(35, 66%, 45%, 0.4);
 }
 
 .screenshots__img {
